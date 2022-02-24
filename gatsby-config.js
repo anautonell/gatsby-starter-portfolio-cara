@@ -48,6 +48,18 @@ module.exports = {
         ],
       },
     },
+    // In your gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-plugin-nprogress`,
+    options: {
+      // Setting a color is optional.
+      color: `tomato`,
+      // Disable the loading spinner.
+      showSpinner: false,
+    },
+  },
+]
     `gatsby-plugin-gatsby-cloud`,
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
@@ -59,3 +71,4 @@ module.exports = {
     },
   ].filter(Boolean),
 }
+
